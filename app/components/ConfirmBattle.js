@@ -1,12 +1,11 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var PropTypes = React.PropTypes;
-var Link = ReactRouter.Link
-var UserDetails = require('../components/UserDetails');
-var UserDetailsWrapper = require('../components/UserDetailsWrapper');
-var MainContainer = require('../components/MainContainer');
-var Loading = require('../components/Loading');
-var styles = require('../styles');
+import React, {PropTypes} from 'react'
+import {Link} from 'react-router'
+
+import UserDetails from '../components/UserDetails'
+import UserDetailsWrapper from '../components/UserDetailsWrapper'
+import MainContainer from '../components/MainContainer'
+import Loading from '../components/Loading'
+import styles from '../styles'
 
 
 function ConfirmBattle(props) {
@@ -50,4 +49,4 @@ ConfirmBattle.propTypes = {
     onInitiateBattle: PropTypes.func.isRequired
 }
 
-module.exports = ConfirmBattle
+export default ConfirmBattle
