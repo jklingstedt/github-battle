@@ -5,7 +5,7 @@ import UserDetails from '../components/UserDetails'
 import UserDetailsWrapper from '../components/UserDetailsWrapper'
 import MainContainer from '../components/MainContainer'
 import Loading from '../components/Loading'
-import styles from '../styles'
+import * as styles from '../styles'
 
 
 function ConfirmBattle(props) {
