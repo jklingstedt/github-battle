@@ -7,9 +7,8 @@ import MainContainer from '../components/MainContainer'
 import Loading from '../components/Loading'
 import * as styles from '../styles'
 
-
-function ConfirmBattle(props) {
-    return props.isLoading === true
+function ConfirmBattle({isLoading, playersInfo, onInitiateBattle}) {
+    return isLoading === true
         ? <Loading text="You have balls" speed={1000} />
         :
         <MainContainer>
@@ -17,18 +16,18 @@ function ConfirmBattle(props) {
             <div className='col-sm-8 col-sm-offset-2'>
                 <UserDetailsWrapper header="Player One">
                     <UserDetails
-                        info={props.playersInfo[0]}
+                        info={playersInfo[0]}
                     />
                 </UserDetailsWrapper>
                 <UserDetailsWrapper header="Player Two">
                     <UserDetails
-                        info={props.playersInfo[1]}
+                        info={playersInfo[1]}
                     />
                 </UserDetailsWrapper>
             </div>
             <div className='col-sm-8 col-sm-offset-2'>
                 <div className='col-sm-12' style={styles.space}>
-                    <button type="button" className="btn btn-lg btn-success" onClick={props.onInitiateBattle}>
+                    <button type="button" className="btn btn-lg btn-success" onClick={onInitiateBattle}>
                         Initate Battle
                     </button>
                 </div>
